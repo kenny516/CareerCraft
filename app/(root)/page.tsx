@@ -21,11 +21,11 @@ const page = async () => {
         <>
             <section className='card-cta'>
                 <div className='flex flex-col gap-6 max-w-lg'>
-                    <h2>Get interview ready with ai practise and feedback</h2>
-                    <p className='text-lg'>Join our program to enhance your skills and boost your confidence.</p>
-                    <Button asChild className='btn-primary max-sm:w-full'>
+                    <h2>✨ Practice Your Interview with AI</h2>
+                    <p className='text-lg'>🎯 Join our program to enhance your skills and boost your confidence.</p>
+                    <Button asChild className='btn-primary max-sm:w-full hover:scale-105 transition-transform'>
                         <Link href='/interview'>
-                            Start an interview
+                            🚀 Start an Interview
                         </Link>
                     </Button>
                 </div>
@@ -34,30 +34,30 @@ const page = async () => {
                     alt='robot'
                     width={400}
                     height={400}
-                    className='max-sm:hidden'
+                    className='max-sm:hidden animate-pulse'
                 />
             </section>
             <section className='flex flex-col gap-6 mt-8'>
-                <h2>Your interview</h2>
+                <h2>📝 Your Interviews</h2>
                 <div className='interviews-section'>
                     {hasPastInterviews ? (
                         userinterviews?.map((interview) => (
                             <InterviewCard {...interview} key={interview.id} />
                         ))
                     ) : (
-                        <p>You haven&apos;t taken any interviews yet</p>
+                        <p>📭 You haven&apos;t taken any interviews yet</p>
                     )}
                 </div>
             </section>
             <section className='flex flex-col gap-6 mt-8'>
-                <h2>Take an interview</h2>
+                <h2>🎯 Available Interviews</h2>
                 <div className='interviews-section'>
                     {hasUpCommingInterviews ? (
                         latestInterview?.map((interview) => (
                             <InterviewCard {...interview} key={interview.id} />
                         ))
                     ) : (
-                        <p>You haven&apos;t taken any upcoming interviews yet</p>
+                        <p>🔍 No interviews available at the moment</p>
                     )}
                 </div>
             </section>
@@ -65,4 +65,4 @@ const page = async () => {
     )
 }
 
-export default page 
+export default page
