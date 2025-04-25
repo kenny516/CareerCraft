@@ -156,13 +156,12 @@ const Agent = ({ userName, userId, type, interviewId, questions }: AgentProps) =
                     <button className='relative btn-call' onClick={handleCall}>
                         <span className={cn("absolute", callStatus !== "CONNECTING" && "hidden")} />
                         <span>
-                            {isCallIsInactiveOrFinished ? "Call" : ". . ."}
+                            {isCallIsInactiveOrFinished ? "Start Call" : "Connecting..."}
                         </span>
-
                     </button>
                 ) : (
                     <button className="btn-disconnect flex justify-center" onClick={handleDisconnect}>
-                        End
+                        End Call
                     </button>
                 )}
             </div >

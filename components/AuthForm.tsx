@@ -97,7 +97,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
                     />
                     <h2 className='text-primary-100'>CareerCraft</h2>
                 </div>
-                <h3>Practice job interview with AI</h3>
+                <h3>✨ Practice Job Interviews with AI</h3>
 
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6 mt-4 form">
@@ -121,13 +121,13 @@ const AuthForm = ({ type }: { type: FormType }) => {
                             placeholder="Enter your password"
                             type="password"
                         />
-                        <Button className='btn' type="submit">{!isSignIn ? "Create an Account" : "Sign In"}</Button>
+                        <Button className='btn' type="submit">{!isSignIn ? "Create Account" : "Sign In"}</Button>
                     </form>
                 </Form>
 
-                <p className='text-center'>{isSignIn ? "No account yet?" : "Have an account already?"}
+                <p className='text-center'>{isSignIn ? "No account yet?" : "Already have an account?"}
                     <Link href={!isSignIn ? "/sign-in" : "/sign-up"} className='font-bold text-user-primary ml-1' >
-                        {isSignIn ? "Sign In" : "Sign Up"}
+                        {isSignIn ? "Sign Up" : "Sign In"}
                     </Link>
                 </p>
             </div>
