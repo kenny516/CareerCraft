@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 CareerCraft - Your AI Interview Coach
 
-## Getting Started
+> 🎯 Prepare for job interviews like never before with AI!
 
-First, run the development server:
+CareerCraft is a modern web application that revolutionizes job interview preparation through artificial intelligence. Simulate realistic interviews and receive detailed feedback to shine in your future interviews! ✨
+
+## ⭐ Key Features
+
+- 🤖 **AI Interview Simulation**: Practice with an intelligent and responsive AI interviewer
+- 📝 **Personalized Interviews**: Questions generated based on your profile and goals
+- 📊 **Detailed Feedback**: In-depth analysis with scores and personalized advice
+- 🔐 **Secure Authentication**: Data protection with Firebase
+- 🎨 **Elegant Interface**: Modern and intuitive design with Tailwind CSS
+
+## 🛠️ Prerequisites
+
+- 📦 Node.js 18+
+- 🔥 Firebase Account
+- 🔑 Required API Keys:
+  - 🧠 Google AI (Gemini)
+  - 🎙️ VAPI
+  - 🔒 Firebase Admin
+
+## 🚀 Installation
+
+1. 📥 Clone the repository:
+
+```bash
+git clone https://github.com/kenny516/CareerCraft.git
+cd CareerCraft
+```
+
+2. ⚡ Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. 🔧 Configure environment variables:
+   - 📝 Copy `.env.exemple` to `.env.local`
+   - ✏️ Fill in the following variables:
+
+```env
+FIREBASE_PROJECT_ID=your_project_id
+FIREBASE_PRIVATE_KEY=your_private_key
+FIREBASE_CLIENT_EMAIL=your_client_email
+GOOGLE_GENERATIVE_AI_API_KEY=your_google_api_key_gemini
+NEXT_PUBLIC_VAPI_WEB_TOKEN=your_vapi_web_token
+```
+
+4. 🌟 Start the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🌐 The application will be available at [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 🎨 **Frontend**: Next.js 15, React, TypeScript
+- 💅 **Styling**: Tailwind CSS, Shadcn UI
+- 🔥 **Backend**: Firebase (Auth & Firestore)
+- 🤖 **AI**: Google AI (Gemini), VAPI
+- 🔒 **Authentication**: Firebase Auth
+- 💾 **Database**: Firestore
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- 📱 `/app` - Next.js routes and pages
+- 🧩 `/components` - Reusable React components
+- 🛠️ `/lib` - Utilities, actions and SDK
+- 🖼️ `/public` - Static assets
+- 📝 `/types` - TypeScript types
+- 🔥 `/firebase` - Firebase configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are welcome! Feel free to:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 🐛 Report bugs
+- 💡 Suggest ideas
+- 🔧 Submit pull requests
+- 📜 Review code
