@@ -27,7 +27,6 @@ export async function signUp(params: SignUpParams) {
             message: 'User created successfully',
         }
 
-
     } catch (error: any) {
         console.error('Error creating the user :', error);
         if (error.code === 'auth/email-already-in-use') {
@@ -55,6 +54,10 @@ export async function signIn(params: SignInParams) {
             }
         }
         await setSessionCookie(idToken);
+        return {
+            success: true,
+            message: 'Signed in successfully'
+        }
     } catch (error: any) {
         console.error('Error signing in:', error);
         return {
@@ -106,4 +109,15 @@ export async function getCurrentUser(): Promise<User | null> {
 export async function isAuthenticated() {
     const user = await getCurrentUser();
     return !!user;
+}
+
+
+export async function logout() {
+
+    const cookieStore = await cookies();
+    cookieStore.delete('session');
+    return {
+        success: true,
+        message: 'Logged out successfully',
+    }
 }
